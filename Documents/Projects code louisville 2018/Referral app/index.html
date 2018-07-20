@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
+
 <head>
   <title>Referral Program</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body >
   <div class="navbar">
     <img class="img" src="img/box.jpeg">
     <a href="https://ep.ups.com/UPSRegistration/UPSLogin">UPSers</a>
@@ -16,43 +17,41 @@
     <h1 id="header">Referral Form</h1>
   </div>
   <div class="formborder">
-    <!--action changed here by onRadioButtonChange-->
-    <form id="form_referral" name="form_referral" action="Mailto:jmrumer@gmail.com" method="post" enctype="text/plain">
+    <!--action changed here by radio button selection-->
+    <form id="form_referral" name="form_referral" action="form.php"  method="post" enctype="text/plain">
       <div class="box">
         <label for="fname">First Name:</label><br>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.." required><br>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required autocomplete="off"><br>
 
         <label for="lname">Last Name:</label><br>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required><br>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required autocomplete="off"><br>
 
         <label for="gems">Gems ID:</label><br>
-        <input type="text" id="gems" name="gems" placeholder="Your Gems ID.." required><br>
+        <input type="text" id="gems" name="gems" placeholder="Your Gems ID.." required autocomplete="off"><br>
 
         <label for="ftname">FT Supervisor's Name:</label><br>
-        <input type="text" id="ftname" name="ftname" placeholder="Full-time supervisor's name.." required><br>
+        <input type="text" id="ftname" name="ftname" placeholder="Full-time supervisor's name.." required autocomplete="off"><br>
       </div>
-      <div class="box"><!-- boxes for flexbox manipulation-->
-        <label for="shift">Shift:</label><br>
-        <input id="oneDay" type="radio" name="shift" value="oneDay"> 1DA<br>
-        <input id="twoDay" type="radio" name="shift" value="twoDay"> 2DA<br>
-        <br>
-        <label for="workArea">Work Area:</label><br>
-        <input id="radio_inbound" type="radio" name="wa" value="inbound"> Inbound<br>
-        <input id="radio_outbound" type="radio" name="wa" value="outbound"> Outbound<br>
-        <input id="radio_ramp" type="radio" name="wa" value="ramp"> Ramp<br>
-        <input id="radio_small_sort" type="radio" name="wa" value="smallSort"> Small Sort<br>
+      <div class="box">
+        <!-- boxes for flexbox manipulation-->
+        <label for="shift">Shift and Work Area:</label><br>
+        <input id="oneDayHub" type="radio" name="wa" value="wa" autocomplete="off"> 1DA Hub<br>
+        <input id="twoDayHub" type="radio" name="wa" value="wa" autocomplete="off"> 2DA Hub<br>
+        <input id="oneDayRamp" type="radio" name="wa" value="wa" autocomplete="off">1DA Ramp<br>
+        <input id="twoDayRamp" type="radio" name="wa" value="wa" autocomplete="off">2DA Ramp<br>
+
       </div>
       <div class="box">
         <label for="fname">Referral's First Name:</label><br>
-        <input type="text" id="refname" name="firstname" placeholder="Your name.." required><br>
+        <input type="text" id="refname" name="ref_name" placeholder="Your name.." required autocomplete="off"><br>
 
         <label for="lname">Referral's Last Name:</label><br>
-        <input type="text" id="reflname" name="lastname" placeholder="Your last name.." required><br>
+        <input type="text" id="reflname" name="ref_last_name" placeholder="Your last name.." required autocomplete="off"><br>
         <label for="fname">Referral's Email:</label><br>
-        <input type="text" id="refname" name="firstname" placeholder="Referral's Email.." required><br>
+        <input type="text" id="ref_email" name="ref_email" placeholder="Referral's Email.." required autocomplete="off"><br>
 
         <label for="lname">Referral's Phone Number:</label><br>
-        <input type="text" id="reflname" name="lastname" placeholder="Phone Number.."><br>
+        <input type="text" id="ref_number" name="ref_number" placeholder="Phone Number.." autocomplete="off"><br>
 
         <input class="buttons" id="submit" type="submit" value="Submit">
         <input class="buttons" id="reset" type="reset" value="Reset the form">

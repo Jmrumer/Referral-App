@@ -24,5 +24,8 @@ The class(es) I created are:
 ```
 The Javascript function I created is:
 
- 1.  onRadioButtonChange();
-  Evaluates which radio buttons are checked and changes the value of the action attribute in the form, this in turn changes the email to which the form is submitted.
+ 1.
+ 2. $("#reset").click(function(event){
+   alert("The form has been cleared.");
+   });
+   Gives an alert box when the form is cleared.
